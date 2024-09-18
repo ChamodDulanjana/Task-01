@@ -1,0 +1,92 @@
+query {
+  vehicle(id: 2) {
+    id
+    first_name
+    last_name
+    email
+    car_make
+    car_model
+    vin
+    manufactured_date
+    age_of_vehicle
+  }
+}
+
+
+query {
+  vehicles {
+    id
+    first_name
+    last_name
+    email
+    car_make
+    car_model
+    vin
+    manufactured_date
+    age_of_vehicle
+  }
+}
+
+
+mutation {
+  createVehicle(createVehicleInput: { id: 102, first_name: "John Doe", last_name: "Peter", email: "john@example.com", car_make: "qqq", car_model: "trueqq", vin: "sfwkefonf456",  manufactured_date: "11/11/2023"}) {
+    id
+    first_name
+    last_name
+    email
+    car_make
+    car_model
+    vin
+    manufactured_date
+  }
+}
+
+
+
+mutation {
+  updateVehicle(updateVehicleInput: { id: 102, first_name: "John Doei", last_name: "Peteri", email: "john@examplei.com"}) {
+    id
+    first_name
+    last_name
+    email
+    car_make
+    car_model
+    vin
+    manufactured_date
+    age_of_vehicle
+  }
+}
+
+
+mutation {
+  removeVehicle(id: 102)
+}
+
+
+query {
+  searchVehicle(search: "M") {
+    id
+    first_name
+    last_name
+    car_make
+    car_model
+    manufactured_date
+    age_of_vehicle
+  }
+}
+
+
+
+
+mutation {
+  exportVehiclesByAge(age: 5)
+}
+
+
+
+
+
+
+
+
+
